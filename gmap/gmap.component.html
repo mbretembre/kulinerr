@@ -1,0 +1,36 @@
+<!-- <div *ngIf="lat && lng" > -->
+<div></div>
+<div class="map" id="map">
+  <ion-button class="btn" (click)='rst()'>Test</ion-button>
+<agm-marker [latitude]="lat" [longitude]="lng">
+  <agm-info-window>
+  <h5>Howdy</h5>
+  <b>You are here</b>
+  </agm-info-window>>
+</agm-marker>
+<!-- <ion-button class="btn" (click)='rst()'>Test</ion-button> -->
+<agm-marker *ngFor="let places of data"
+    [latitude]="places.coords.latitude"
+    [longitude]="places.coords.longitude">
+    <agm-info-window>
+      <h3><strong>{{places.Nama}}</strong></h3>
+      <ion-button fill="clear" (click)='setRoute(places.coords.latitude,places.coords.longitude)'>  
+      Direct me
+      </ion-button>
+      <ion-button fill="clear" (click)='shr(places.Nama)'>
+        Detail
+      </ion-button>
+    </agm-info-window>
+    </agm-marker>
+</div>`,
+      <!-- <div *ngIf="lat && lng"> 
+  *ngIf="lat && lng" 
+ 
+  <agm-map *ngIf="lat && lng" [latitude]="lat" [longitude]="lng" >
+    
+
+    
+  </agm-map>
+  </div> 
+</div>-->
+

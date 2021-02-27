@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{passed}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let datas of data">
+  <ion-list>
+    <ion-img src="../../assets/img/{{datas.image}}.png"></ion-img>
+    <ion-item>{{datas.Addrs}}</ion-item>
+    <ion-item>{{datas.ktgr}}</ion-item>
+    <ion-item>{{datas.tlp}}</ion-item>
+  </ion-list>
+
+  <ion-button (click)='bAja(true)'>Back</ion-button>
+
+</ion-content>
